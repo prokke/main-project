@@ -7,11 +7,23 @@
     <title>клиент серверное приложение</title>
 </head>
 <body>
+
+
+<form action="insert-student.php" method="POST">
+    <input type="text" name="fname" id="fname" placeholder="Введите имя" required><br>
+    <input type="text" name="lname" id="lname" placeholder="Введите фамилию" required><br>
+    <input type="number" name="age" id="age" placeholder="Введите возраст" required><br>
+    <input type="radio" name="gender" id="m" value="m" >
+    <label for="m">мужской</label>
+    <input type="radio" name="gender" id="f" value="f" >
+    <label for="f">женский</label>
+    <input type="radio" name="gender" id="attack helicopter" value="attack helicopter" checked>
+    <label for="attack helicopter">боевой вертолет</label><br>
+    <input type="submit" value="добовить"><br><br><br>
+</form>
+
     <?php
-        define("HOST","localhost");
-        define("USER","root");
-        define("PASS","root");
-        define("DB","school");
+        require_once('config.php');
         // connect with db
         $connect = new mysqli(HOST, USER, PASS, DB);
         if($connect->connect_error){
