@@ -6,5 +6,7 @@ formInsert.addEventListener("submit",(event)=>{
     xhr.open("POST","insert-student.php");
     xhr.send(formData);
 
-    xhr.onload = ()=>{console.log()};
+    xhr.onload = ()=>{
+        console.log(xhr.response)
+    };
 });
