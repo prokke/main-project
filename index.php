@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <title>клиент серверное приложение</title>
 </head>
@@ -22,7 +23,7 @@
     <label for="attack helicopter">боевой вертолет</label><br>
     <input type="submit" value="добовить"><br><br><br>
 </form>
-
+    <div class="content">
     <?php
         require_once('config.php');
         // connect with db
@@ -44,9 +45,15 @@
         }
 
 
-        echo "па кайфу! жи есс!";
-    ?>    
+        // echo "па кайфу! жи есс!";
+    ?> 
+    </div>
+       
+<div class="block"></div>
 
+<div class="message">
+
+</div>
 
 </body>
 </html>

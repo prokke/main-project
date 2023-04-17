@@ -18,12 +18,13 @@ $connect->set_charset("utf8");
 $sql = "INSERT INTO `students`(`f_name`, `l_name`, `gender`, `age`) VALUES ('$fname','$lname','$gender',$age)";
 //request run
 $result = $connect->query($sql);
+
 if($result){
-    echo "добавленно";
+    echo "ok)";
     // header("location: index.php");
     // redirect
 }else{
-    echo "ошибка при попытке добавления в баззу данных";
+    echo "error!";
 }
 
 

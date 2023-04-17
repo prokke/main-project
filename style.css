@@ -1,0 +1,30 @@
+.block{
+    width: 600px;
+    height: 200px;
+    background-color:  orangered;
+}
+.block:hover{
+    background-color: cadetblue;
+}
+.message{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    /* opacity: 0;
+    transition: opacity 0.5s ease; */
+    transform: translateX(-1200px);
+    transition: transform 0.1s ease;
+}
+.success{
+    background-color: greenyellow;
+    color: black;
+}
+.reject{
+    background-color: red;
+    color: white;
+}
+.showmessage{
+    transform: translateX(0);
+}
