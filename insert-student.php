@@ -20,7 +20,7 @@ $sql = "INSERT INTO `students`(`f_name`, `l_name`, `gender`, `age`) VALUES ('$fn
 $result = $connect->query($sql);
 if($result){
     echo "добавленно";
-    header("location: index.php");
+    // header("location: index.php");
     // redirect
 }else{
     echo "ошибка при попытке добавления в баззу данных";
