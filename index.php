@@ -23,6 +23,13 @@
     <label for="attack helicopter">боевой вертолет</label><br>
     <input type="submit" value="добовить"><br><br><br>
 </form>
+
+<form id="form-insert-group">
+    <input type="text" name="title" id="title" placeholder="Введите имя группы" required><br>
+    <input type="submit" value="добавить"><br><br><br>
+</form>
+
+
     <div class="content">
     <?php
         require_once('config.php');
@@ -36,16 +43,19 @@
         $connect->set_charset("utf8");
         // request code
         $sql = "SELECT * FROM `students`";
+        $sqlg = "SELECT * FROM `groups`";
         // request run
         $result = $connect->query($sql);
+        $resultg = $connect->query($sqlg);
         // output request result 
+        
         
         while($row = $result->fetch_assoc()){
             echo "<div>$row[l_name], $row[f_name], $row[gender], $row[age]</div>";
         }
-
-
-        // echo "па кайфу! жи есс!";
+        while($row = $resultg->fetch_assoc()){
+            echo "<div>$row[title]</div>";
+        }
     ?> 
     </div>
        
