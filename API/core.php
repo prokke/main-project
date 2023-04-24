@@ -2,6 +2,13 @@
 abstract class Core{
     protected $connect;
 
+    public function formatstr($str){
+        $str = trim($str);
+        $str = stripcslashes($str);
+        $str = htmlspecialchars($str);
+        return $str;
+    }
+
     public function __construct(){
         // connect with DB
         $this->connect = new mysqli(HOST, USER, PASS, DB);
