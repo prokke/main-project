@@ -1,5 +1,5 @@
 <?php
-require_once('config.php');
+require_once('API/config.php');
 
 // получаем данные из формы
 $title = $_POST['title'];

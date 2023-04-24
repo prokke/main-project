@@ -28,3 +28,13 @@
 .showmessage{
     transform: translateX(0);
 }
+.like{
+    fill: rgb(255, 126, 148);
+    width: 12px;
+}
+.like:hover{
+    fill: red;
+}
+.like--active{
+    fill: rgb(192, 73, 192);
+}
