@@ -24,10 +24,13 @@
         echo "<p>Данных нет</p>";
     } else {
     
-        echo "<p class='back'><a href='/'>Назад</a></p>";
+        echo "<p class='back'><a href='./'>Назад</a></p>";
         $myrow  =  $rows->fetch_assoc();
 
         echo "<div>
         $myrow[l_name],$myrow[f_name],$myrow[age],$myrow[title]
-        </div>"; 
+        </div>
+        <img class='avatar'
+        src='./content/$myrow[path_image]'
+        alt='student avatar'>"; 
     }

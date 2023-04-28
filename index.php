@@ -7,7 +7,9 @@ require_once("API/core.php");
 if (isset($_GET['option'])){ //проверяем get параметр
     $class=trim(strip_tags($_GET['option'])); //очищаем его от HTML и PHP-теги и пробелы из начала и конца строки
     
-} else {
+} else if(isset($_POST['option'])){ //проверяем get параметр
+    $class=trim(strip_tags($_POST['option']));
+}else{
     $class='main';
 }
 
