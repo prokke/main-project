@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>клиент серверное приложение</title>
+    <script defer src="fetch.js"></script>
+        <title>клиент серверное приложение</title>
 </head>
 <body>
 
@@ -68,6 +69,14 @@
 <div class="message">
 
 </div>
+
+
+<form id="form-auth" method="POST" action="API/auth.php">
+        <input type="text" id="login" name="login" placeholder="Введите логин" required><br>
+        <input type="password" id="password" name="password" placeholder="Введите пароль" required><br>
+        <input type="submit" value="Войти">
+</form>
+
 
 </body>
 </html>
