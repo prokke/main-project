@@ -12,12 +12,14 @@ function auth(event){
 
     fetch("API/auth.php",{
         method: 'POST',
+        'Content-Type':'application/json',
         body: data
     }).then((response)=>{
-        return response.text();
-    }).then((text)=>{
-        if(text){
-            output.innerHTML = "вы авторизованны";
+        return response.json();
+    }).then((json)=>{
+        console.log(json);
+        if(json.status){
+            output.innerHTML = "вы авторизованны как " + json.name;
             formAuth.style.display = "none";
         }else{
             let p = document.createElement("p");
