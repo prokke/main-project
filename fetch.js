@@ -1,30 +1,25 @@
 const formAuth = document.getElementById("form-auth");
-const output = document.querySelector(".profile");
+const output = document.querySelector(".profile")
 
+formAuth.addEventListener("submit", auth);
 
-
-formAuth.addEventListener("submit",auth);
-
-function auth(event){
+async function auth(event){
     event.preventDefault();
-
     let data = new FormData(formAuth);
-
-    fetch("API/auth.php",{
+    const response = await fetch("api/auth.php",{
         method: 'POST',
-        'Content-Type':'application/json',
+        'Content-Type' : 'application/json',
         body: data
-    }).then((response)=>{
-        return response.json();
-    }).then((json)=>{
-        console.log(json);
-        if(json.status){
-            output.innerHTML = "вы авторизованны как " + json.name;
-            formAuth.style.display = "none";
-        }else{
-            let p = document.createElement("p");
-            p.innerHTML = "ошибка авторизации";
-            output.prepend(p);
+    });
+    json = await response.json();
+            console.log(json);
+            if(json.status){
+                output.innerHTML = "вы авторизованы как " + json.name;
+                formAuth.style.display = "none";
+            }
+            else {
+                let p = document.createElement("p");
+                p.innerHTML = "ошибка авторизации"
+                output.prepend(p);
+            }
         }
-    })
-}
