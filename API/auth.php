@@ -22,9 +22,9 @@ $result->execute();
 $result = $result->get_result();
 
 if($row = $result->fetch_assoc()){
-    echo "вы авторизировались";
+    echo true;
 }else{
-    echo "логин или пароль не вырен";
+    echo false;
 }
 
 

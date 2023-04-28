@@ -12,6 +12,13 @@
 <body>
 
 
+<header>
+    <p class="profile">
+        <a href="#aform-auth">Авторизоваться</a>
+    </p>
+</header>
+
+
 <form id="form-insert-students">
     <input type="text" name="fname" id="fname" placeholder="Введите имя" required><br>
     <input type="text" name="lname" id="lname" placeholder="Введите фамилию" required><br>
